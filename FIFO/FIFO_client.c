@@ -16,7 +16,7 @@ int main (int argc, char *argv[])
 	const char *fifo = "/tmp/my_fifo";
 	int  fd = open(fifo,O_WRONLY);
 	if(fd != -1){
-		write (fd, argv[1], strlen(argv[1]+1));
+		write (fd, argv[1], strlen(argv[1]+1));    //Client write message on the FIFO .
 		close(fd);
 	}
 	else

@@ -15,7 +15,7 @@ int main(int argc, int *argv[])
 			printf("Could not create fifo\n");
 		}
 	}
-	while(1){
+	while(1){                // The server will keep receiving message from clients.
 		FILE *FIFO = fopen (fifo, "r");
 		fscanf(FIFO,"%s",buffer);
 		printf("Message %s has been transferred to the Server! \n",buffer);
